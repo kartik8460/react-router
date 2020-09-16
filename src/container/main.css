@@ -1,0 +1,30 @@
+.navigation {
+    background-color: black;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.navigation a:hover,
+.navigation a:active,
+.navigation a.active {
+    color: #fa923f;
+}
+
+.navigation .my-active {
+    color: blueviolet;
+}
