@@ -6,6 +6,7 @@ import Dashboard from './../components/Dashboard';
 import Contact from './../components/Contact';
 import RouteParameters from './../components/RouteParameters';
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
+import NestedRouteParent from '../components/NestedRouteParent';
 
 const Main = () => {
     return (
@@ -27,7 +28,6 @@ const Main = () => {
                                 textDecoration: 'underline'
                             }} to="/dashboard">Dashboard</NavLink>
                         </li>
-                        <br />
                         <li>
                             <Link to={{
                                 pathname: "/contact-us",
@@ -40,15 +40,20 @@ const Main = () => {
                             <Link to="/route-param/sample-parameter?search=kartik#heading-3">Route Parameter</Link>
                         </li>
 
+                        <li>
+                            <Link to="/nested-routes">Nested Routes</Link>
+                        </li>
+
                     </ul>
                 </nav>
             </header>
             <Switch>
+                <Route path="/" exact component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/dashboard" component={Dashboard} />
-                <Route path="/" exact component={Home} />
                 <Route path="/contact-us" component={Contact} />
                 <Route path="/route-param/:parameter" component={RouteParameters} />
+                <Route path="/nested-routes" component={NestedRouteParent} />
             </Switch>
         </div>
     )
